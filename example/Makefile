@@ -6,7 +6,7 @@ all: $(Docs)
 	mkdir -p vimoutput
 	PATH="../tools:$$PATH" context --environment="$<" "$(@:pdf=xml)"
 
-Example.xml: rapport_optique.md
+rapport_optique.xml: rapport_optique.md
 	pandoc --no-highlight -s --section-divs --filter pandoc-plantuml -o "$@" -t html $^
 
 clean: ./environment.tex

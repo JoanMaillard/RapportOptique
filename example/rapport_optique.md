@@ -2,7 +2,7 @@
 toc: yes
 date: 18 Oct 2021
 title: G12 / Matrice de transfert de 2 lentilles / 5
-subtitle: Mesure de la matrice de transfert d'une association de deux lentilles épaisses
+subtitle: Mesure de la matrice de transfert de deux lentilles épaisses
 author:
   - Keroan Ringger
 ---

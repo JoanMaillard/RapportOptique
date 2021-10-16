@@ -1,0 +1,18 @@
+---
+Render example:
+  image: registry.gitlab.com/islandoftex/images/context:beta
+  stage: build
+  before_script:
+    - apt update
+    - apt install -y pandoc make pandoc-plantuml-filter inkscape vim
+  script:
+    - pushd ./example; make; popd
+    - mkdir -p artifacts
+    - cp ./example/Example.pdf artifacts
+  artifacts:
+    name: reports
+    when: on_success
+    paths:
+      - "artifacts/*"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
