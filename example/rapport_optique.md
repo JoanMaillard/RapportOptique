@@ -39,7 +39,10 @@ Tout système optique peut être représenté de manière matricielle par une ma
 </md>
 
 où <mi>X_{e}</mi> et <mi>X_{s}</mi> sont respectivement les vecteurs d'entrée et de sortie.
-<!--- insert schéma HES -->
+<br />
+
+![Schéma système optique](images/schema_1.jpg)
+
 Le vecteur d'entrée
 <md>
 /startformula
@@ -60,7 +63,6 @@ par les calculs théoriques, la deuxième par processus d'expérimentaton.
 
 ### Détermination par calculs
 
-<!--- Insert schéma de montage -->
 Notre système optique est constitué d'un système de deux lentilles épaisses séparées de <mi>100 mm</mi>. Une lentille épaisse peut être simplifiée en un sous-système optique de deux lentilles fine, et d'une matrice de transition. Cette dernière peut aussi être appliquée entre les deux lentilles épaisses de notre système.
 
 Une matrice de réfraction (dioptre optique) peut s'écrire de la manière suivante:
@@ -73,6 +75,11 @@ Une matrice de réfraction (dioptre optique) peut s'écrire de la manière suiva
     /stopmatrix
   /stopformula
 </md>
+
+<br />
+<br />
+<br />
+<br />
 
 Ici, <mi>V</mi> représente la vergence du dioptre. Elle se calcule comme suit:
 
@@ -88,8 +95,6 @@ Ici:
 - <mi>n_{i}</mi>: Indice de réfraction dans l'espace image
 - <mi>R</mi>: Rayon de courbure du dioptre
 
-<br />
-<br />
 
 Dans le cas particulier où le dioptre n'aurait pas de rayon de courbure et serait un
 plan horizontal, il est admis que sa vergence est nulle (<mi>V = 0</mi>). De ce fait, sa
@@ -128,7 +133,7 @@ Ici:
 
 ### Modélisation du système optique
 
-<!--- Insert schéma système optique -->
+![Schéma système optique](images/schema_1.jpg)
 
 Comme nous pouvons le voir sur le schéma, le rayon lumineux va commencer par entrer dans la première lentille épaisse.
 Le premier dioptre parcouru étant un plan horizontal, sa matrice de réfraction est <mi>/mathcal{I}</mi>, suivie d'une
@@ -143,6 +148,9 @@ L'ensemble complet de ces matrices est calculé comme suit:
     /mathcal{H}/subscript{ES} = /mathcal{IT_{3}R_{2}T_{2}R_{1}T_{1}I} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)
   /stopformula
 </md>
+
+<br />
+<br />
 
 Ici:
 
@@ -213,9 +221,11 @@ Finalement, en se référant à l'équation matricielle (1), on obtient la matri
   /stopformula
 </md>
 
-## Fond théorique de l'expérimentation {.nopagebreak}
+## Fond théorique de l'expérimentation
 
 Sachant qu'on peut modéliser notre système optique au moyen de la matrice <mi>/mathcal{H}/subscript{ES}</mi> comme suit:
+
+![Schéma HES](images/schema_2.jpg)
 
 <md>
   /startformula
@@ -245,10 +255,10 @@ figeant cette fois-ci <mi>h_{e}</mi> à 0 et en faisant varier <mi>/alpha_{e}</m
 Cet état de fait est dû aux simplifications suivantes de la modélisation matricielle du système optique suivantes:
 
 <md>
-  /alpha_{e} = 0 /rightarrow h_{s} = h_{11} /cdotp h_{e}, /alpha_{s} = h_{21} /cdotp h_{e}
+  /alpha_{e} = 0 /rightarrow h_{s} = h_{11} /cdotp h_{e};\ \ \ /alpha_{s} = h_{21} /cdotp h_{e}
 </md>
 <md>
-  h_{e} = 0 /rightarrow h_{s} = h_{12} /cdotp /alpha_{e}, /alpha_{s} = h_{22} /cdotp /alpha_{e}
+  h_{e} = 0 /rightarrow h_{s} = h_{12} /cdotp /alpha_{e};\ \ \ /alpha_{s} = h_{22} /cdotp /alpha_{e}
 </md>
 
 Ces équations prennent en compte le fait que <mi>n_{e}</mi> et <mi>n_{s}</mi> prennent tous les deux en compte l'indice de réfraction de
@@ -260,6 +270,7 @@ L'angle en sortie <mi>/alpha_{s}</mi> est déterminé en mesurant l'écart entre
 <md>/alpha_{s} = /arctan{/frac{/Delta_{x}}{/Delta_{y}}}</md>
 
 <!--- Insert image mesure angle -->
+![Mesure <mi>/alpha_{s}</mi>](images/schema_3.jpg)
 
 ## Procédé expérimental {.nopagebreak}
 
@@ -273,34 +284,34 @@ L'angle en sortie <mi>/alpha_{s}</mi> est déterminé en mesurant l'écart entre
 
 Pour <mi>/alpha_{s} = 0</mi>:
 
-| **he** [m]            | **hs** [m] | **<mi>/Delta_{Y}</mi>** [m] | **<mi>/Delta_{X}</mi>** [m] | **<mi>/alpha_{S}</mi>** [rad]       |
+| **he** [m]            | **hs** [m] | **<mi>/Delta_{X}</mi>** [m] | **<mi>/Delta_{Y}</mi>** [m] | **<mi>/alpha_{S}</mi>** [rad]       |
 |-------------------|--------|------------|------------|--------------------|
-| 0                 | 0      | 0          | 0.26       | 0                  |
-| 0.069813170079773 | 0.001  | -0.01      | 0.254      | -0.039349756388605 |
-| 0.10471975511966  | 0.0015 | -0.01      | 0.177      | -0.056437178311703 |
-| 0.139626340159546 | 0.0015 | -0.015     | 0.192      | -0.077966633831542 |
-| 0.174532925199433 | 0.002  | -0.01      | 0.111      | -0.089847539694628 |
-| 0.20943951023932  | 0.002  | -0.02      | 0.189      | -0.105427751122891 |
-| 0.244346095279206 | 0.0025 | -0.02      | 0.151      | -0.131683853555638 |
-| 0.279252680319093 | 0.0025 | -0.02      | 0.141      | -0.14090400627121  |
-| 0.349065850398866 | 0.0025 | -0.02      | 0.112      | -0.176708856070037 |
+| 0                 | 0      | 0      | 0.26   | 0                  |
+| 0.069813170079773 | 0.001  | -0.01  | 0.254  | -0.039349756388605 |
+| 0.10471975511966  | 0.0015 | -0.01  | 0.177  | -0.056437178311703 |
+| 0.139626340159546 | 0.0015 | -0.015 | 0.192  | -0.077966633831542 |
+| 0.174532925199433 | 0.002  | -0.01  | 0.111  | -0.089847539694628 |
+| 0.20943951023932  | 0.002  | -0.02  | 0.189  | -0.105427751122891 |
+| 0.244346095279206 | 0.0025 | -0.02  | 0.151  | -0.131683853555638 |
+| 0.279252680319093 | 0.0025 | -0.02  | 0.141  | -0.14090400627121  |
+| 0.349065850398866 | 0.0025 | -0.02  | 0.112  | -0.176708856070037 |
 | **Incertitudes abs.** |        |            |            |                    |
-| 0.0005            | 0.0005 | 0.0005     | 0.0005     | 0.017453292519943  |
+| 0.0005            | 0.0005 | 0.0005 | 0.0005 | 0.017453292519943  |
 
 Pour <mi>h_{e} = 0</mi>:
 
-| **<mi>/alpha_{E}</mi>** [rad]      | **hs** [m]  | **<mi>/Delta_{Y}</mi>** [m] | **<mi>/Delta_{X}</mi>** [m] | **<mi>/alpha_{S}</mi>** [rad]       |
+| **<mi>/alpha_{E}</mi>** [rad]      | **hs** [m]  | **<mi>/Delta_{X}</mi>** [m] | **<mi>/Delta_{Y}</mi>** [m] | **<mi>/alpha_{S}</mi>** [rad]       |
 |-------------------|---------|------------|------------|--------------------|
-| 0                 | 0       | 0          | 0.012      | 0                  |
-| 0.05235987755983  | -0.004  | -0.0075    | 0.58       | -0.012930313815177 |
-| 0.087266462599717 | -7.5    | 0.001      | 0.852      | 0.001173708381224  |
-| 0.10471975511966  | -0.0095 | -0.005     | 0.338      | -0.014791820507172 |
-| 0.139626340159546 | -13.8   | -0.005     | 0.32       | -0.015623728620477 |
-| 0.174532925199433 | -0.016  | -0.005     | 0.25       | -0.019997333973151 |
-| 0.20943951023932  | -0.0195 | 0          | 0.273      | 0                  |
-| 0.261799387799149 | -0.025  | 0          | 0.175      | 0                  |
+| 0                 | 0       | 0       | 0.012  | 0                  |
+| 0.05235987755983  | -0.004  | -0.0075 | 0.58   | -0.012930313815177 |
+| 0.087266462599717 | -7.5    | 0.001   | 0.852  | 0.001173708381224  |
+| 0.10471975511966  | -0.0095 | -0.005  | 0.338  | -0.014791820507172 |
+| 0.139626340159546 | -13.8   | -0.005  | 0.32   | -0.015623728620477 |
+| 0.174532925199433 | -0.016  | -0.005  | 0.25   | -0.019997333973151 |
+| 0.20943951023932  | -0.0195 | 0       | 0.273  | 0                  |
+| 0.261799387799149 | -0.025  | 0       | 0.175  | 0                  |
 | **Incertitudes abs.** |         |            |            |                    |
-| 0.017453292519943 | 0.0005  | 0.0005     | 0.0005     | 0.017453292519943  |
+| 0.017453292519943 | 0.0005  | 0.0005  | 0.0005 | 0.017453292519943  |
 
 Grâce à ces données, nous sommes à même d'effectuer la régression linéaire mentionnée précédemment afin d'établir la matrice
 <mi>/mathcal{H}/subscript{ES}</mi> de façon expérimentale:
@@ -332,3 +343,9 @@ Les résultats pratiques obtenus nous révèlent donc que la calibration attenti
 cohérents, mettant ainsi en lumière le bien-fondé du processus expérimental puisqu'il nous a montré l'alignement imparfait du système.
 
 ## Conclusion {.nopagebreak}
+
+Notre manipulation en laboratoire vise à obtenir la matrice <mi>/mathcal{H}/subscript{ES}</mi> d'un système optique de deux lentilles
+épaisses séparées de 100mm de manière théorique, puis expérimentale, afin de les confronter. Cette comparaison nous montre une différence
+trop importante pour être expliquée seulement par les imprécisions de mesure. Cet écart s'explique par la grande imprécision de notre montage,
+notamment à cause de la méthodologie et du matériel employé. Toutefois, cette expérience n'est pas un échec puisqu'elle a permis de mettre en
+lumière l'importance cruciale de l'alignement d'un système optique tel que son objet.
