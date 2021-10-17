@@ -213,7 +213,7 @@ Finalement, en se référant à l'équation matricielle (1), on obtient la matri
   /stopformula
 </md>
 
-## Fond théorique de l'expérimentation
+## Fond théorique de l'expérimentation {.nopagebreak}
 
 Sachant qu'on peut modéliser notre système optique au moyen de la matrice <mi>/mathcal{H}/subscript{ES}</mi> comme suit:
 
@@ -254,6 +254,13 @@ Cet état de fait est dû aux simplifications suivantes de la modélisation matr
 Ces équations prennent en compte le fait que <mi>n_{e}</mi> et <mi>n_{s}</mi> prennent tous les deux en compte l'indice de réfraction de
 l'air, qui vaut 1.
 
+L'angle en sortie <mi>/alpha_{s}</mi> est déterminé en mesurant l'écart entre le centre du pointeur laser et le centre de la cible
+(<mi>/Delta_{x}</mi>), ainsi que la distance entre la cible et la deuxième lentille épaisse du système (<mi>/Delta_{y}</mi>).
+
+<md>/alpha_{s} = /arctan{/frac{/Delta_{x}}{/Delta_{y}}}</md>
+
+<!--- Insert image mesure angle -->
+
 ## Procédé expérimental {.nopagebreak}
 
 1. Noter la position de l'axe optique (normalement à 100 mm sur l'axe transveral au rail);
@@ -264,8 +271,64 @@ l'air, qui vaut 1.
 
 ## Présentation des données brutes {.nopagebreak}
 
+Pour <mi>/alpha_{s} = 0</mi>:
+
+| **he** [m]            | **hs** [m] | **<mi>/Delta_{Y}</mi>** [m] | **<mi>/Delta_{X}</mi>** [m] | **<mi>/alpha_{S}</mi>** [rad]       |
+|-------------------|--------|------------|------------|--------------------|
+| 0                 | 0      | 0          | 0.26       | 0                  |
+| 0.069813170079773 | 0.001  | -0.01      | 0.254      | -0.039349756388605 |
+| 0.10471975511966  | 0.0015 | -0.01      | 0.177      | -0.056437178311703 |
+| 0.139626340159546 | 0.0015 | -0.015     | 0.192      | -0.077966633831542 |
+| 0.174532925199433 | 0.002  | -0.01      | 0.111      | -0.089847539694628 |
+| 0.20943951023932  | 0.002  | -0.02      | 0.189      | -0.105427751122891 |
+| 0.244346095279206 | 0.0025 | -0.02      | 0.151      | -0.131683853555638 |
+| 0.279252680319093 | 0.0025 | -0.02      | 0.141      | -0.14090400627121  |
+| 0.349065850398866 | 0.0025 | -0.02      | 0.112      | -0.176708856070037 |
+| **Incertitudes abs.** |        |            |            |                    |
+| 0.0005            | 0.0005 | 0.0005     | 0.0005     | 0.017453292519943  |
+
+Pour <mi>h_{e} = 0</mi>:
+
+| **<mi>/alpha_{E}</mi>** [rad]      | **hs** [m]  | **<mi>/Delta_{Y}</mi>** [m] | **<mi>/Delta_{X}</mi>** [m] | **<mi>/alpha_{S}</mi>** [rad]       |
+|-------------------|---------|------------|------------|--------------------|
+| 0                 | 0       | 0          | 0.012      | 0                  |
+| 0.05235987755983  | -0.004  | -0.0075    | 0.58       | -0.012930313815177 |
+| 0.087266462599717 | -7.5    | 0.001      | 0.852      | 0.001173708381224  |
+| 0.10471975511966  | -0.0095 | -0.005     | 0.338      | -0.014791820507172 |
+| 0.139626340159546 | -13.8   | -0.005     | 0.32       | -0.015623728620477 |
+| 0.174532925199433 | -0.016  | -0.005     | 0.25       | -0.019997333973151 |
+| 0.20943951023932  | -0.0195 | 0          | 0.273      | 0                  |
+| 0.261799387799149 | -0.025  | 0          | 0.175      | 0                  |
+| **Incertitudes abs.** |         |            |            |                    |
+| 0.017453292519943 | 0.0005  | 0.0005     | 0.0005     | 0.017453292519943  |
+
+Grâce à ces données, nous sommes à même d'effectuer la régression linéaire mentionnée précédemment afin d'établir la matrice
+<mi>/mathcal{H}/subscript{ES}</mi> de façon expérimentale:
+
+<md>
+  /startformula
+    /mathcal{H}/subscript{ES_{ex}} =
+    /startmatrix[align={right, right},left={/left[},right={/right]}]
+      /NC 0.0072 /NC 3.0360 /NR
+      /NC -0.5018 /NC 0.0040 /NR
+    /stopmatrix
+  /stopformula
+</md>
+
 ## Analyse des données finales {.nopagebreak}
 
-## Commentaires {.nopagebreak}
+Comme il est possible de le voir, la matrice <mi>/mathcal{H}/subscript{ES_{ex}}</mi> a des composantes qui sont passablement
+éloignées de la matrice <mi>/mathcal{H}/subscript{ES}</mi> obtenue par calcul théorique. Cette différence peut notamment s'expliquer
+par un modèle théorique qui approxime trop les déviations pratiques comme les éventuelles aberrations géométriques, et qui part du
+principe que les lentilles sont parfaitement alignées. Ce n'est visiblement pas le cas au vu de la matrice <mi>/mathcal{H}/subscript{ES_{ex}}</mi>
+obtenue, qui dévie de plus que sa marge d'incertitude de la matrice <mi>/mathcal{H}/subscript{ES}</mi>.
+
+En effet, cet alignement est crucial puisque s'il n'est pas respecté, les angles incidents d'entrée dans les lentilles épaisses sont modifiés
+à cause du mauvais alignement sur le banc expérimental. De ce fait, les offsets artificiels dûs à la disposition du système optique faussent les
+mesures d'angle à l'entrée, respectivement la sortie de ces lentilles. De ce fait, il est plus que raisonnable de penser que les mesures obtenues
+ne représentent pas la réalité et nous fournissent donc une matrice <mi>/mathcal{H}/subscript{ES_{ex}}</mi> imparfaite.
+
+Les résultats pratiques obtenus nous révèlent donc que la calibration attentive du banc de test est plus que nécessaire à l'obtention de résultats
+cohérents, mettant ainsi en lumière le bien-fondé du processus expérimental puisqu'il nous a montré l'alignement imparfait du système.
 
 ## Conclusion {.nopagebreak}
