@@ -118,7 +118,7 @@ se calcule comme suit:
 
 <md>
   /startformula
-    /mathcal{R} =
+    /mathcal{T} =
     /startmatrix[align={right, right},left={/left[},right={/right]}]
       /NC 1 /NC /frac{/overbar{AB}}{n} /NR
       /NC 0 /NC 1 /NR
@@ -157,7 +157,7 @@ Ici:
 - T1:
 <md>
   /startformula
-    /mathcal{R} =
+    /mathcal{T_{1}} =
     /startmatrix[align={right, right},left={/left[},right={/right]}]
       /NC 1 /NC 0.0067 /NR
       /NC 0 /NC 1 /NR
@@ -168,7 +168,7 @@ Ici:
 - R1:
 <md>
   /startformula
-    /mathcal{R} =
+    /mathcal{R_{1}} =
     /startmatrix[align={right, right},left={/left[},right={/right]}]
       /NC 1 /NC 0 /NR
       /NC -7.4544 /NC 1 /NR
@@ -179,7 +179,7 @@ Ici:
 - T2:
 <md>
   /startformula
-    /mathcal{R} =
+    /mathcal{T_{2}} =
     /startmatrix[align={right, right},left={/left[},right={/right]}]
       /NC 1 /NC 0.1 /NR
       /NC 0 /NC 1 /NR
@@ -190,7 +190,7 @@ Ici:
 - R2:
 <md>
   /startformula
-    /mathcal{R} =
+    /mathcal{R_{2}} =
     /startmatrix[align={right, right},left={/left[},right={/right]}]
       /NC 1 /NC 0 /NR
       /NC -11.396 /NC 1 /NR
@@ -201,7 +201,7 @@ Ici:
 - T3:
 <md>
   /startformula
-    /mathcal{R} =
+    /mathcal{T_{3}} =
     /startmatrix[align={right, right},left={/left[},right={/right]}]
       /NC 1 /NC 0.0096 /NR
       /NC 0 /NC 1 /NR
